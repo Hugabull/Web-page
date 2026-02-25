@@ -1,5 +1,5 @@
-const bibbles = document.querySelectorAll(".bibble");
-const container = document.getElementById("bibbles");
+const bibbles = document.querySelectorAll(".things");
+const container = document.getElementById("things");
 
 
 bibbles.forEach(img => {
