@@ -81,17 +81,17 @@ body{
     font-size: 20px;
 }
 
-.bibbles img{
+.things img{
   height: 80px;
 }
 
 
-.bibble{
+.move{
   position: absolute;
   transition: transform 1s ease;
 }
 
-#bibbles {
+#things {
   position: relative;
   width: auto;
   height: 80vh;
