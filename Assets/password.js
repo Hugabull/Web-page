@@ -6,7 +6,7 @@ const nessie = document.querySelector(".nessie-box");
         var question = prompt("Who is our mutual friend?");
         var cat = prompt("What is my cats name?");
 
-        if(name.toLowerCase() == "mylo smith" && question.toLowerCase() == "nessie" && cat.toLowerCase() == "justice"){
+        if(name.toLowerCase() == "marshall dunn" && question.toLowerCase() == "nessie" && cat.toLowerCase() == "justice"){
             alert("You have unlocked spectial mode");
             alert("this is a reminder that I really really really like you and I am so happy to have you in my life, you are so pretty and so amazing and I like you so fucking much");
             nessie.classList.toggle("open");
