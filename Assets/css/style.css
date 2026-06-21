@@ -2,7 +2,7 @@
     margin: 0;
     padding: 20px;
     text-decoration: none;
-    color: rgb(143, 88, 194);
+    color: rgb(69, 69, 233);
 }
 
 @media (max-width: 768px) {
@@ -20,7 +20,7 @@
 }
 
 .nav.open{
-    background-color: rgb(247, 169, 241);
+    background-color: rgb(205, 83, 150);
 }
 
 .nav-toggle{
@@ -69,11 +69,11 @@
 }
 
 .nav a.active{
-    color: rgb(236, 30, 185);
+    color: rgb(54, 160, 247);
 }
 
 body{
-    background-color: bisque;
+    background-color: rgb(201, 154, 97);
     margin: 0;
     transition: background-color 1s;
 }
