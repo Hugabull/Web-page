@@ -1,4 +1,4 @@
-const things = document.querySelectorAll(".things");
+const things = document.querySelectorAll(".move");
 const container = document.getElementById("things");
 
 
