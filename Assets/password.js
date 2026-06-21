@@ -6,7 +6,7 @@ const nessie = document.querySelector(".nessie-box");
         var question = prompt("Awtism?");
         var cat = prompt("What is my cats name?");
 
-        if(name.toLowerCase() == "Marshall Dunn" && question.toLowerCase() == "nessie" && cat.toLowerCase() == "justice"){
+        if(name.toLowerCase() == "marshall dunn" && question.toLowerCase() == "nessie" && cat.toLowerCase() == "justice"){
             alert("You have unlocked spectial mode");
             nessie.classList.toggle("open");
             document.body.classList.add('rainbow');
