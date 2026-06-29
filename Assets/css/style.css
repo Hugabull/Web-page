@@ -74,7 +74,7 @@
 
 body{
     background-color: rgb(169, 148, 218);
-    margin: 0;
+    margin: 0.2;
     transition: background-color 1s;
 }
 .p{
@@ -175,4 +175,56 @@ body.rainbow {
   71%  { background-color: indigo; }
   85%  { background-color: violet; }
   100% { background-color: red; }
+}
+
+.linkedin-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 16px;
+  max-width: 400px;
+
+  background: #000000;
+  border: 1px solid #9b26a5;
+  border-radius: 15px;
+
+  transition: 0.2s ease;
+}
+
+.linkedin-card:hover {
+  border-color: #0077b5;
+  transform: translateY(-2px);
+}
+
+.linkedin-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.linkedin-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: white;
+
+}
+
+.headline {
+  margin: 1px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.linkedin-content a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #0077b5;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.linkedin-content a:hover {
+  text-decoration: underline;
 }
