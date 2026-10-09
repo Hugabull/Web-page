@@ -1,5 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import '../Assets/css/style.css';
+import profilePic from '../Assets/Images/Profile_pic.jpeg';
+import mikuImage from '../Assets/Images/miku.webp';
+import nessieImage from '../Assets/Images/nessie.webp';
+
+const soundFiles = import.meta.glob('../Assets/sound/*.mp3', {
+  eager: true,
+  import: 'default',
+  query: '?url',
+});
 
 const soundButtons = [
   ['helloBabies', 'Hello my babies', 'helloBabies.mp3', { color: 'white', backgroundColor: 'rgb(213, 73, 213)' }],
@@ -55,7 +64,7 @@ function Home() {
       <p className="home-text">I will update this website periodically.</p>
       <iframe width="314" height="321" scrolling="no" className="nelly" title="Nelly pet" src="https://gify.pet/pet/pet.html?name=Nelly&dob=1782708205&gender=f&element=Water&pet=https%3A%2F%2Fartr2.pixilart.com%2Fcfr2848b603bc8aws3.png&map=sea.jpg&background=gify.jpg&tablecolor=%239c02b1&textcolor=black" />
       <div className="linkedin-card">
-        <img src="/Assets/Images/Profile_pic.jpeg" alt="Profile picture" className="linkedin-avatar" />
+        <img src={profilePic} alt="Profile picture" className="linkedin-avatar" />
         <div className="linkedin-content">
           <h3 className="name">Marshall Dunn</h3>
           <p className="headline">Software Engineering Student @ UNB</p>
@@ -89,7 +98,7 @@ function Things() {
 
   return <div className="things" id="things" ref={containerRef}>
     {positions.map((position, index) => (
-      <img key={index} src="/Assets/Images/miku.webp" alt="thing" className="move" onMouseEnter={() => randomize(index)} style={{ transform: `translate(${position.x}px, ${position.y}px)` }} />
+      <img key={index} src={mikuImage} alt="thing" className="move" onMouseEnter={() => randomize(index)} style={{ transform: `translate(${position.x}px, ${position.y}px)` }} />
     ))}
   </div>;
 }
@@ -105,7 +114,7 @@ function Collection() {
       window.alert('You have unlocked spectial mode');
       setIsUnlocked(true);
       document.body.classList.add('rainbow');
-      const audio = new Audio('/Assets/sound/suit.mp3');
+      const audio = new Audio(soundFiles['../Assets/sound/suit.mp3']);
       audio.play();
     } else {
       window.alert('nope');
@@ -116,7 +125,7 @@ function Collection() {
     <div className="collections"><ul /></div>
     <button className="password" onClick={unlock}>Click Here Please!</button>
     <div className={`nessie-box${isUnlocked ? ' open' : ''}`}>
-      {[1, 2, 3].map((number) => <img key={number} src="/Assets/Images/nessie.webp" alt="" id={`ness${number}`} />)}
+      {[1, 2, 3].map((number) => <img key={number} src={nessieImage} alt="" id={`ness${number}`} />)}
     </div>
   </>;
 }
@@ -134,7 +143,7 @@ function Stims() {
     {soundButtons.map(([id, label, file, style]) => (
       <button key={id} data-sound={id} style={style} onClick={() => playSound(id)}>{label}</button>
     ))}
-    {soundButtons.map(([id, , file]) => <audio key={file} ref={(audio) => { audioRefs.current[id] = audio; }} src={`/Assets/sound/${file}`} />)}
+    {soundButtons.map(([id, , file]) => <audio key={file} ref={(audio) => { audioRefs.current[id] = audio; }} src={soundFiles[`../Assets/sound/${file}`]} />)}
   </div>;
 }
 
